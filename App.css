@@ -1,5 +1,10 @@
-
+body::-webkit-scrollbar {
+  display: none;
+}
 body{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   color: white;
@@ -17,6 +22,7 @@ body{
 }
 
 div.filmCard {
+  position: relative;
   margin: 5px;
   display: flex;
   flex-direction: column;
@@ -51,7 +57,7 @@ div.filmImage {
 */
 }
 
-img {
+div.filmImage img {
   object-fit: cover;
   width: 200px;
   height: 275px;
@@ -66,54 +72,64 @@ div.filmRating {
   width: 30px;
   bottom: 15px;
   left: 15px;
-  color: #fff12f;
+  color: #ffda0b;
   font-size: 20px;
   font-weight: bold;
-  border: 3px solid #fff12f;
+  border: 3px solid #ffda0b;
   border-radius: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.486);
+}
+div.filmFootage{
+  position: absolute;
+  height: 30px;
+  width: 35px;
+  bottom: 0px;
+  right: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color:  #ffda0b;
 }
 
 .filmYear {
   font-size: 13px;
 }
 div.header{
+  display: flex;
   z-index: 1;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.021);
+  align-items: center;
+  justify-content: space-between;
   background: rgba(221, 221, 221, 0.466);
   background: linear-gradient(135deg, rgba(148, 148, 148, 0.219) 0%, rgba(148, 148, 148, 0.31974796754639356) 100%);
 }
-nav ul{
-  display: flex;
-  justify-content: right;
-  list-style: none;
-  align-items: center;
-}
-nav li{
-  display: inline;
-  padding: 0 15px 0 15px;
+
+div.header a{
+  color: #ffda0b;
+  text-decoration: none;  
   font-size: 25px;
   font-weight: bold;
-  
-}
-nav li:not(:last-child):not:first
-{
-  border-right: 1px solid white;
-}
-nav li a{
-  color: white;
-  text-decoration: none;  
 }
 
+div.logo img{
+  padding-left: 60px;
+  padding-bottom: 10px;
+  width: 300px;
+}
+div.changeFilms{
+  width: 250px;
+  display: flex;
+  justify-content: center;
+
+
+}
 /*
 div.filmImage:hover {
   transform: rotateY(180deg);
 }
+
 img.imgFrontside .imgBackside{
   position: relative;
   top: 0;
@@ -133,3 +149,58 @@ img.imgFrontside .imgBackside{
   background-color: black;
 }
 */
+
+/* TOP 10 MOVIES */
+
+div.topCard:first-child, div.topCard:last-child {
+  width: 1050px;
+  height: 400px;
+}
+div.topCard{
+  background: rgb(148, 148, 148);
+  background: linear-gradient(135deg, rgba(148, 148, 148, 1) 0%, rgba(148, 148, 148, 0.31974796754639356) 100%);
+  width: 515px;
+  height: 275px;
+  position: relative;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+}
+div.topCard:first-child div.topImage, div.topCard:last-child div.topImage{
+width: 285px;
+height: 400px;
+}
+div.topImage{
+  object-fit: cover;
+  width: 200px;
+  height: 275px;
+}
+div.topCard:first-child img, div.topCard:last-child img{
+  object-fit: cover;
+  width: 285px;
+  height: 400px;
+}
+div.topImage img{
+  object-fit: cover;
+  width: 200px;
+  height: 275px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+div.topInfo{
+  padding: 10px 15px 0 15px;
+  width: 315px;
+  height: 275px;
+}
+div.topCard:first-child div.topInfo, div.topCard:last-child div.topInfo{
+width: 765px;
+height: 400px;
+}
+div.topCard:first-child div.topTitle, div.topCard:last-child div.topTitle{
+font-size: 75px;
+}
+div.topTitle{
+  font-weight: bold;
+  font-size: 30px;
+}

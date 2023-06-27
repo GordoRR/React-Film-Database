@@ -26,7 +26,7 @@ app.get("/listMovies", async (req, res) => {
   
 });
 app.get("/topTenMovies", async (req, res) => {
-  res.json({topTen: await getTop10()});
+  res.json({movies: await getTop10()});
 })
 
 app.listen(PORT, () => {
@@ -52,6 +52,6 @@ function getMovieRating(id) {
 }
 
 function getTop10(){
-data.sort((a, b) => b.rating - a.rating);
-return data.slice(0,10)
+  const topTen = data.sort((a, b) => b.rating - a.rating);
+return topTen.slice(0,10);
 }
