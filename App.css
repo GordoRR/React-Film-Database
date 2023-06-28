@@ -1,7 +1,8 @@
 body::-webkit-scrollbar {
   display: none;
 }
-body{
+
+body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   box-sizing: border-box;
@@ -80,7 +81,8 @@ div.filmRating {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.486);
 }
-div.filmFootage{
+
+div.filmFootage {
   position: absolute;
   height: 30px;
   width: 35px;
@@ -88,13 +90,14 @@ div.filmFootage{
   right: 20px;
   font-size: 12px;
   font-weight: bold;
-  color:  #ffda0b;
+  color: #ffda0b;
 }
 
 .filmYear {
   font-size: 13px;
 }
-div.header{
+
+div.header {
   display: flex;
   z-index: 1;
   width: 100%;
@@ -106,25 +109,27 @@ div.header{
   background: linear-gradient(135deg, rgba(148, 148, 148, 0.219) 0%, rgba(148, 148, 148, 0.31974796754639356) 100%);
 }
 
-div.header a{
+div.header a {
   color: #ffda0b;
-  text-decoration: none;  
+  text-decoration: none;
   font-size: 25px;
   font-weight: bold;
 }
 
-div.logo img{
+div.logo img {
   padding-left: 60px;
   padding-bottom: 10px;
   width: 300px;
 }
-div.changeFilms{
+
+div.changeFilms {
   width: 250px;
   display: flex;
   justify-content: center;
 
 
 }
+
 /*
 div.filmImage:hover {
   transform: rotateY(180deg);
@@ -152,11 +157,13 @@ img.imgFrontside .imgBackside{
 
 /* TOP 10 MOVIES */
 
-div.topCard:first-child, div.topCard:last-child {
+div.topCard:first-child,
+div.topCard:last-child {
   width: 1050px;
   height: 400px;
 }
-div.topCard{
+
+div.topCard {
   background: rgb(148, 148, 148);
   background: linear-gradient(135deg, rgba(148, 148, 148, 1) 0%, rgba(148, 148, 148, 0.31974796754639356) 100%);
   width: 515px;
@@ -166,41 +173,173 @@ div.topCard{
   display: flex;
   flex-direction: row;
   border-radius: 20px;
+  line-height: 1;
 }
-div.topCard:first-child div.topImage, div.topCard:last-child div.topImage{
-width: 285px;
-height: 400px;
+
+div.topCard:first-child div.topImage,
+div.topCard:last-child div.topImage {
+  width: 285px;
+  height: 400px;
 }
-div.topImage{
+
+div.topImage {
+  position: relative;
   object-fit: cover;
   width: 200px;
   height: 275px;
 }
-div.topCard:first-child img, div.topCard:last-child img{
+
+div.topCard:first-child img,
+div.topCard:last-child img {
   object-fit: cover;
   width: 285px;
   height: 400px;
 }
-div.topImage img{
+
+div.topImage img {
   object-fit: cover;
   width: 200px;
   height: 275px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-div.topInfo{
-  padding: 10px 15px 0 15px;
+
+div.topInfo {
+  position: relative;
+  padding: 15px;
   width: 315px;
-  height: 275px;
+  height: 245px;
 }
-div.topCard:first-child div.topInfo, div.topCard:last-child div.topInfo{
-width: 765px;
-height: 400px;
+
+div.topCard:first-child div.topInfo,
+div.topCard:last-child div.topInfo {
+  width: 765px;
+  height: 370px;
 }
-div.topCard:first-child div.topTitle, div.topCard:last-child div.topTitle{
-font-size: 75px;
+
+div.topCard:first-child div.topTitle,
+div.topCard:last-child div.topTitle {
+  font-size: 75px;
 }
-div.topTitle{
+
+div.topTitle {
   font-weight: bold;
   font-size: 30px;
+}
+
+div.topYear {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+div.topCard:first-child div.topCategory,
+div.topCard:last-child div.topCategory {
+  font-size: 30px;
+}
+
+div.topCategory {
+  font-weight: 600;
+  color: #ffda0b;
+  font-size: 17.5px;
+}
+
+div.topCard:first-child div.topFootage,
+div.topCard:last-child div.topFootage {
+  bottom: 65px;
+}
+
+div.topFootage {
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  left: 25px;
+  bottom: 45px;
+  color: #ffda0b;
+}
+
+div.topFilmAttributes div {
+  padding: 1px 0 2px 1.5%;
+}
+
+div.topCard:first-child div.topRating,
+div.topCard:last-child div.topRating {
+  width: 75px;
+  height: 75px;
+  line-height: 70px;
+  font-size: 50px;
+  font-weight: 600;
+  border: 4px solid #ffda0b;
+}
+
+div.topRating {
+  display: flex;
+  justify-content: center;
+  line-height: 47.5px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  border: 3px solid #ffda0b;
+  border-radius: 100%;
+  font-size: 30px;
+  position: absolute;
+  color: #ffda0b;
+  right: 30px;
+  bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.123);
+}
+
+div.topInfo div.topDescription {
+  padding: 10px;
+}
+
+div.topIndex {
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #ffda0b;
+  font-weight: bold;
+}
+
+div.topCard:first-child div.topIndex,
+div.topCard:last-child div.topIndex {
+  font-size: 40px;
+}
+
+div.setRating {
+  position: absolute;
+  bottom: 50px;
+  display: none;
+  font-size: 20px;
+  
+}
+div.topCard:last-child div.setRating, div.topCard:first-child div.setRating{
+  bottom: 75px;
+}
+
+div.topRating:hover .setRating,
+div.setRating:hover {
+  display: flex;
+}
+div.filmRating:hover .setRating,
+div.setRating:hover {
+  display: flex;
+}
+
+div.setRating div {
+  z-index: 1;
+  transition: all .1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #ffda0b;
+  color: #ffda0b;
+  line-height: 27.5px;
+  background-color: rgba(0, 0, 0, 0.123);
+}
+div.setRating div:hover{
+  transform: scale(1.1);
+  cursor: pointer;  
 }

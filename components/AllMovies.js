@@ -10,12 +10,17 @@ export default function AllMovies() {
                 console.log(data);
             });
     }, [])
+    function setRating(id, event){
+        const value = event.target.textContent;
+        console.log(id + " " + value);
+    }
     return data.map(movie => (
-        <div key={movie.ObjectID} className="filmCard allMovies">
+        <div key={movie._id} className="filmCard allMovies">
             <div className='filmImage'>
                 <div className='imgFrontside'>
                     <img src={movie.image} />
-                    <div className='filmRating'>{movie.rating}</div>
+                    <div className='filmRating'>{movie.rating}
+                    </div>
                 </div>
                 <div className='imgBackside'>
                     <div className='filmDescription'></div>

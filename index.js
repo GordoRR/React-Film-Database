@@ -19,14 +19,14 @@ let data = [];
 
 app.get("/listMovies", async (req, res) => {
   data = await loadData();
-  data.map(movie => {
+  await data.map(movie => {
     movie.rating = getMovieRating(movie._id);
   })
   res.json({movies: data});
   
 });
 app.get("/topTenMovies", async (req, res) => {
-  res.json({movies: await getTop10()});
+  res.json({topTen: await getTop10()});
 })
 
 app.listen(PORT, () => {
