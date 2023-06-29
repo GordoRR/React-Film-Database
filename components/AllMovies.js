@@ -10,16 +10,25 @@ export default function AllMovies() {
                 console.log(data);
             });
     }, [])
-    function setRating(id, event){
-        const value = event.target.textContent;
-        console.log(id + " " + value);
-    }
+
     return data.map(movie => (
         <div key={movie._id} className="filmCard allMovies">
             <div className='filmImage'>
                 <div className='imgFrontside'>
                     <img src={movie.image} />
                     <div className='filmRating'>{movie.rating}
+                        <div className='setRating' onClick={(event) => setRating(movie._id, event)}>
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                            <div>10</div>
+                        </div>
                     </div>
                 </div>
                 <div className='imgBackside'>
@@ -35,4 +44,26 @@ export default function AllMovies() {
         </div>
     ));
 }
+
+function setRating(id, event) {
+    const value = event.target.textContent;
+    console.log(id + " " + value);
+/*
+    fetch(`/updateRating`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ rating: value })
+    })
+    .then((res) => {
+        if (res.ok) {
+            console.log("Rating updated successfully");
+        } else {
+            console.log("Failed to update rating");
+        }
+    })
+    */
+};
+
 

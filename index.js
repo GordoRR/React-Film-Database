@@ -32,6 +32,13 @@ app.get("/topTenMovies", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
+/*
+app.post("/updateRating", async(req, res) => {
+  const id = await req.params.id;
+  const value = await req.body.rating;
+  await console.log("server " + id + " " + value);
+})
+*/
 
 function getMovieRating(id) {
   const movie = data.find(movie => id === movie._id && movie.grades != null);

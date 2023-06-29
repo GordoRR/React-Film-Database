@@ -39,6 +39,7 @@ div.filmCard {
 div.filmInfo {
   padding-left: 10px;
   height: 125px;
+  position: relative;
 }
 
 div.filmTitle {
@@ -80,6 +81,8 @@ div.filmRating {
   border-radius: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.486);
+  display: flex;
+  justify-content: center;
 }
 
 div.filmFootage {
@@ -337,9 +340,20 @@ div.setRating div {
   border: 2px solid #ffda0b;
   color: #ffda0b;
   line-height: 27.5px;
-  background-color: rgba(0, 0, 0, 0.123);
+  background-color: rgba(0, 0, 0, 0.486);
 }
 div.setRating div:hover{
   transform: scale(1.1);
   cursor: pointer;  
+}
+div.filmRating div.setRating{
+  bottom: 30px;
+}
+div.filmRating div.setRating div{
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+}
+div.setRating:focus div{
+  display: none;
 }
